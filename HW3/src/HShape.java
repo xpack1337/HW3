@@ -13,12 +13,16 @@ public class HShape extends AbstractShape {
 		g.setColor(color);
 		// just for illustration (don't write the letter H!)
 		g.drawRect(x, y, size, size);
-		for (int i = 0;i<size;i++){
-			for(int j = 0;j<size;j++){
-				if((i!= 0)&&(j!=1)){
-				g.drawRect(j, i, size/3, size/3);
+		for(int i = 0;i<=2;i++){
+			for(int j = 0;j<=2;j++){
+				if((i == 1)&&(j==(0) || j ==(2))){
+					
+				}else{
+					g.drawRect(x + j*size/3, y + i*size/3 , size/3, size/3);
+				}
 			}
 		}
-	}
-	}
+		}
+	
 }
+
