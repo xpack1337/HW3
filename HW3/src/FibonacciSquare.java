@@ -11,13 +11,14 @@ public class FibonacciSquare extends AbstractShape {
 		this.quadrant = quadrant;
 	}
 
-	private static int fib(int n) {
-		// returns the value of the nth fibonacci number
-		if(n<=1){
-			return 1;
-		}else{
-			return fib(n-1) + fib(n-2);
-		}
+	private static int fib(int n){
+	    if(n == 0){
+	    	return 0;
+	    }else if(n==1){
+	    	return 1;
+	    }else{
+	    	return fib(n-1) + fib(n-2);
+	    }
 	}
 
 	@Override
@@ -30,16 +31,18 @@ public class FibonacciSquare extends AbstractShape {
 		// Draw an arc
 		if (quadrant == 1) {
 			g.drawArc(x - size, y, 2 * size, 2 * size, 0, 90);
-
 		} else if (quadrant == 2) {
 			g.drawArc(x, y, 2 * size, 2 * size, 90, 90);
 		} else if (quadrant == 3) {
-			g.drawArc(x,y,2*size,2*size,90,90);
+			g.drawArc(x,y-size,2*size,2*size,180,90);
 
 		} else {
-			g.drawArc(x, y-size, 2*size, 2*size, 90, 0);
+			g.drawArc(x-size, y-size, 2*size, 2*size, 270, 90);
 		}
 
+	}
+	public FibonacciSquare deepcopy(){
+		return new FibonacciSquare(this.x, this.y, this.size,this.quadrant, this.color);
 	}
 
 }

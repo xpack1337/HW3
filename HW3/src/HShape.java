@@ -22,7 +22,11 @@ public class HShape extends AbstractShape {
 				}
 			}
 		}
+	
 		}
+	public HShape deepcopy(){
+		return new HShape(this.x,this.y,this.size);
+	}
 	
 }
 
