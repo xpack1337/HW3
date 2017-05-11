@@ -16,9 +16,9 @@ public class HShape extends AbstractShape {
 		for(int i = 0;i<=2;i++){
 			for(int j = 0;j<=2;j++){
 				if((i == 1)&&(j==(0) || j ==(2))){
-					
+					g.clearRect(x + i*size/3, y + j*size/3, size/3 + 1, size/3 + 1);
 				}else{
-					g.drawRect(x + j*size/3, y + i*size/3 , size/3, size/3);
+					g.fillRect(x + i*size/3, y + j*size/3 , size/3 + 1, size/3 + 1);
 				}
 			}
 		}
