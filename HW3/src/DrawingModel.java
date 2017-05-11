@@ -35,11 +35,11 @@ public class DrawingModel {
 	 * Returns the list of the shapes
 	 */
 	public List<Shape> getShapes() {
-		List<Shape> copy = new ArrayList<Shape>();
+		List<Shape> copy = new ArrayList<Shape>();//local empty ArraysList that will hold the copy 
 		for(Shape s: shapes){
-			copy.add(s.deepcopy());
+			copy.add(s.deepCopy());//fill the array with deep copies of all current objects
 		}
-		return copy;
+		return copy;// return the deep copy of shapes
 		
 	}
 
